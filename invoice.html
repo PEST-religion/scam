@@ -98,13 +98,11 @@
 
     document.getElementById('device-info').textContent = deviceType;
 
-
     //ブラウザOS
     $("#device").text(platform.description);
     $("#delete").click(() => {
       $("#notification").addClass("is-hidden")
     });
-
 
     //IP
     fetch('https://api.ipify.org?format=json')
@@ -116,7 +114,6 @@
       document.getElementById('ip-address').textContent = 'エラー';
       console.error('Error:', error);
     });
-
 
     //カウントダウン
     const countdownElement = document.getElementById('countdown');
